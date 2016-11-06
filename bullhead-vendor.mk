@@ -97,8 +97,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/bullhead/proprietary/lib/soundfx/libfmas.so:system/lib/soundfx/libfmas.so
 
 PRODUCT_PACKAGES += \
-    SystemUIGoogle
-    SettingsGoogle
     HiddenMenu \
     RCSBootstraputil \
     RcsImsBootstraputil \
