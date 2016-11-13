@@ -20,8 +20,28 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 
 endif
 
-# Load SystemUIGoogle and SettingsGoogle
+# Load SystemUIGoogle and friends :D
 PRODUCT_PACKAGES += \
 	SystemUIGoogle \
-	SettingsGoogle \
-	SetupWizard
+	Settings \
+	SetupWizard \
+	PixelSoundResources \
+	WallpapersBReel \
+	WallpapersUsTwo \
+	WallpaperPickerGooglePrebuilt \
+	NexusWallpapersStubPrebuilt
+
+# Copy GES libraries
+GES_LIBS := vendor/pixelrom/libs
+GES_LIBS86 := $(GES_LIBS)/arm-v7
+GES_LIBS64 := $(GES_LIBS)/arm64-v8a
+PRODUCT_COPY_FILES := \
+	$(GES_LIBS86)/libjpeg.so:system/lib/libjpeg.so:google \
+	$(GES_LIBS64)/libgdx.so:system/lib64/libgdx.so:google \
+	$(GES_LIBS64)/libgeswallpapers-jni.so:system/lib64/libgeswallpapers-jni:google \
+	$(GES_LIBS64)/libjpeg.so:system/lib64/libjpeg.so:google
+
+# Copy new mixer-paths
+MIXER_PATHS_XML := vendor/pixelrom/patches/mixer_paths.xml
+PRODUCT_COPY_FILES := \
+	$(MIXER_PATHS_XML):system/etc/mixer_paths.xml:google
