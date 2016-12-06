@@ -13,12 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opa.eligible_device=true \
 	ro.storage_manager.enabled=true \
 
-# ADB Secure enable on user builds
-ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-	ro.adb.secure=0 \
-endif
-
 # Load SystemUIGoogle and friends :D
 PRODUCT_PACKAGES += \
 	SystemUIGoogle \
