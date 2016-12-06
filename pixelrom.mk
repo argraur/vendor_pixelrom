@@ -29,3 +29,7 @@ PRODUCT_PACKAGES += \
 	WallpapersUsTwo \
 	WallpaperPickerGooglePrebuilt \
 	NexusWallpapersStubPrebuilt
+
+# Overlay
+$(call inherit-product, vendor/pixelrom/product/fake_nexus.mk)
+$(call inherit-product, vendor/pixelrom/product/fake_pixel.mk)
