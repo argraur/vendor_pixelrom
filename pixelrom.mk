@@ -31,5 +31,6 @@ PRODUCT_PACKAGES += \
 	NexusWallpapersStubPrebuilt
 
 # Overlay
-$(call inherit-product, vendor/pixelrom/product/fake_nexus.mk)
-$(call inherit-product, vendor/pixelrom/product/fake_pixel.mk)
+$(call inherit-product, vendor/pixelrom/product/pixelrom1.mk)
+$(call inherit-product, vendor/pixelrom/product/pixelrom.mk)
+
