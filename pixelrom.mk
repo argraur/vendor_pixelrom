@@ -22,7 +22,7 @@ endif
 # Load SystemUIGoogle and friends :D
 PRODUCT_PACKAGES += \
 	SystemUIGoogle \
-	Settings \
+	SettingsGoogle \
 	SetupWizard \
 	PixelSoundResources \
 	WallpapersBReel \
